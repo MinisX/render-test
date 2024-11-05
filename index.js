@@ -6,6 +6,8 @@ const cors = require('cors')
 app.use(express.json())
 // allow for requests from all origins
 app.use(cors())
+// To make Express show static content, the page index.html and the JavaScript, etc., it fetches, we need a built-in middleware from Express called static
+app.use(express.static('dist'))
 
 let notes = [
   {
